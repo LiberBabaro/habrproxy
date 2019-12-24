@@ -3,7 +3,7 @@ import regex
 words_regex = regex.compile('(<[^>]+?>)([^<]+)', regex.IGNORECASE)
 words_6_regex = regex.compile(r'([^\p{Cyrillic}a-z_]|\A)([\p{Cyrillic}a-z]{6})([^\p{Cyrillic}a-z_]|\Z)',
                               regex.IGNORECASE)
-links_regex = regex.compile(r'(<\s*a[^>]href=")https?://(habrahabr.ru|habr.com/ru)([^"]*)', regex.IGNORECASE)
+links_regex = regex.compile(r'(href=")https?://(habrahabr.ru|habr.com/ru)([^"]*)', regex.IGNORECASE)
 
 
 def replace_content(content):
